@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopInput</title>
+</head>
+
+<body>
+    <input type="number" id="input">
+    <button onclick="show()">Show</button>
+    <p id="result"></p>
+    <script>
+        function show() {
+            let str = '';
+            let num = 0;
+            let input = document.getElementById('input').value;
+            for (i = 1; i <= input; i++) {
+                str += i;
+                num += i;
+                if (i < input) {
+                    str += ' + ';
+                }
+                document.getElementById('result').innerHTML = str + ' = ' + num;
+            }
+        }
+    </script>
+</body>
+
+</html>
